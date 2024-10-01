@@ -41,6 +41,7 @@ export class Tokenizer {
 
     private getToken(token: string | undefined): Token | null {
         if (!token) return null;
+        
         let isNumber = parseInt(token);
 
         if (isNumber) return { type: "NUMBER", value: token };
